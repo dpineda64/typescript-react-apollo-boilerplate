@@ -7,6 +7,6 @@ import Home from './index';
 describe('Route Home', () => {
   it('renders', () => {
     const home = enzyme.shallow(<Home />);
-    expect(home.find('.home'));
+    expect(home.find('.page--home'));
   });
 });
