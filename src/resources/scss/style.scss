@@ -1,0 +1,46 @@
+@import "~fractures/dist/fractures.css";
+@import url('https://fonts.googleapis.com/css?family=Lato|Merriweather');
+@import "./plugins/jam-icons.css";
+
+@import "./vars";
+@import "./mixins";
+
+@import "./atoms/input";
+
+// molecules
+
+// organisms
+@import "./organisms/navigation";
+
+// Pages
+@import "./pages/page";
+
+
+html, body{
+  margin: 0;
+  height: 100%;
+  font-size: 14px;
+  font-family: $font-lato;
+  font-weight: 400;
+  background-color: $color-white ;
+}
+
+#app, .wrapper {
+  height: 100%;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 18% 82%;
+}
+
+.container{
+  height: 100%;
+  grid-template-rows: auto 90% auto;
+  grid-template-columns: 100%;
+}
+
+.content{
+  max-width: 90%;
+  margin: 0 auto;
+}

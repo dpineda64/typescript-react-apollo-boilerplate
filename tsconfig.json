@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": false,
+    "target": "es2017",
+    "jsx": "react",
+    "baseUrl": "./",
+    "noEmit": true,
+    "skipLibCheck": true,
+    "lib": [
+      "es2016",
+      "dom",
+      "esnext"
+    ],
+    "paths": {
+      "components": ["./src/components"],
+      "atoms/*": ["./src/components/atoms/*"],
+      "data": ["./src/data"],
+      "modules/*": ["./src/data/modules/*"],
+      "molecules/*": ["./src/components/molecules/*"],
+      "organisms/*": ["./src/components/organisms/*"],
+      "templates/*": ["./src/components/templates/*"],
+      "pages/*": ["./src/pages/*"],
+      "data/*": ["./src/apollo/data/*"],
+      "utils/*": ["./src/utils/*"]
+    },
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
+  ],
+}
