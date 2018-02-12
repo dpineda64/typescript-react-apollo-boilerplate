@@ -1,7 +1,7 @@
 import gql from 'graphql-tag';
 
-namespace Users {
-  export const userFragment = gql`
+export namespace Users {
+  export const fragment = gql`
     fragment user on viewer {
       username
       email
@@ -13,6 +13,6 @@ namespace Users {
         ...user
       }
     }
-    ${userFragment}
+    ${fragment}
   `;
 }

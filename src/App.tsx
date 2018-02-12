@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { Route, withRouter } from 'react-router';
-import routes from './routes';
-import { Navigation } from 'organisms/navigation';
 import { graphql, withApollo } from 'react-apollo';
-import { getViewer } from 'data/users';
 import { compose } from 'recompose';
+import routes from './routes';
+import { Users } from 'data/users';
 import { loadingState, errorState } from 'organisms/data-hoc';
 
 
@@ -13,7 +12,6 @@ class App extends React.Component<any, {}> {
     const { data } = this.props;
     return (
       <div className="wrapper">
-        <Navigation currentUser={data.viewer} />
         {routes.map(route => (
           <Route
             key={route.id}
@@ -28,7 +26,7 @@ class App extends React.Component<any, {}> {
 }
 
 const enhacedApp = compose(
-  graphql(getViewer),
+  // graphql(Users.getViewer),
   loadingState(),
   errorState(),
 )(withRouter(App));

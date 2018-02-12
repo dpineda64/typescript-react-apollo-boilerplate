@@ -1,8 +1,11 @@
-import { takeEvery } from 'redux-saga';
-import * as actions from './actions';
+import { takeLatest } from 'redux-saga';
+import { put, fork } from 'redux-saga/effects';
 
-import { loadStart } from './fetching';
+function* testSaga() {
+  yield put({ type: 'TEST' });
+}
 
-export default function* rootSaga(){
-  yield takeEvery(actions.LOADING_START, loadStart);
+export default function* rootSaga() {
+  // YOUR SAGAS HERE
+  yield fork(testSaga);
 }

@@ -12,19 +12,5 @@ export default [
     path: '/',
     component: home,
   },
-  {
-    id: 'route-services',
-    routeName: 'services',
-    exact: true,
-    path: '/services',
-    component: services,
-  },
-  {
-    id: 'route-endpoint',
-    routeName: 'endpoint',
-    exact: true,
-    path: '/endpoints/:endpointId',
-    component: endpoint,
-  },
 ];
 

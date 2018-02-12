@@ -6,23 +6,6 @@ import Table from 'molecules/table';
 import { loadingState, errorState } from 'organisms/data-hoc';
 
 class Home extends React.Component<any, any> {
-  static fragments = {
-    endpoint: Endpoints.fragment,
-  };
-  constructor(props:any) {
-    super(props);
-    this.state = {
-      openModal: false,
-    };
-  }
-
-  openModal = (e: any) => {
-    if (e) {
-      e.preventDefault();
-    }
-    this.setState({ openModal: !this.state.openModal });
-  }
-
   render() {
     return (
       <div className="page page--home">
@@ -35,11 +18,6 @@ class Home extends React.Component<any, any> {
 }
 
 export default compose(
-  withProps((props:any) => {
-    return {
-      viewer: props.viewer,
-    };
-  }),
   loadingState(),
   errorState(),
 )(Home);
